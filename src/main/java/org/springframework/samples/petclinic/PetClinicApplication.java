@@ -21,6 +21,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportRuntimeHints;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+
 /**
  * PetClinic Spring Boot Application.
  *
@@ -28,12 +29,13 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
  */
 @SpringBootApplication
 @ImportRuntimeHints(PetClinicRuntimeHints.class)
-public class PetClinicApplication extends SpringBootServletInitializer  {
+public class PetClinicApplication extends SpringBootServletInitializer {
 
 	@Override
-protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-    return application.sources(PetClinicApplication.class);
-}
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(PetClinicApplication.class);
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(PetClinicApplication.class, args);
 	}
